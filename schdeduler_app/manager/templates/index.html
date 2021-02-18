@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> events </title>
+</head>
+<body>
+<div class="container">
+{% for event in events %}
+    <h2>{{ event.title }}</h2>
+    <span>
+        {{ event.date_from }} -
+        {{ event.date_till }}
+    </span>
+    <h5>{{ event.description }}</h5>
+    <br>
+{% endfor %}
+
+<a href="{% url 'event_page' %}"> EVENT_PAGE </a>
+</div>
+
+</body>
+</html>
