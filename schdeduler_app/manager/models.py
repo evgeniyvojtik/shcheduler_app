@@ -35,7 +35,7 @@ class Event(models.Model):
     date_from = models.DateField(verbose_name='event_start_date')
     start_time = models.TimeField(verbose_name='event starts...')
     date_till = models.DateField(verbose_name='event_end_date')
-    end_time = models.DateTimeField(verbose_name='event_end_time...')
+    end_time = models.TimeField(verbose_name='event_end_time...')
     description = models.TextField()
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_event')
 
